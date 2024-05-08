@@ -2,7 +2,7 @@
 <html xmlns:str="http://exslt.org/strings" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Smoke_Test_Extranet_Testing_18-4-2024</title>
+        <title>Test Results &mdash; </title>
         <style type="text/css">
           html {
             height: 100%
@@ -572,9 +572,9 @@ jQuery.cookie = function(name, value, options) {
     <body>
         <div id="container">
             <div id="header">
-                <div class="time" xmlns="">3 m 17 s</div>
+                <div class="time" xmlns="">2 m 12 s</div>
                 <h1>
-                    : <strong><span class="total" xmlns="http://www.w3.org/1999/xhtml">42 total, </span><span class="failed">5 failed, </span><span class="ignored">3 ignored, </span><span class="passed">34 passed</span></strong>
+                    : <strong><span class="total" xmlns="http://www.w3.org/1999/xhtml">42 total, </span><span class="failed">8 failed, </span><span class="ignored">9 ignored, </span><span class="passed">25 passed</span></strong>
                 </h1>
                 <div id="treecontrol">
                     <ul>
@@ -591,14 +591,14 @@ jQuery.cookie = function(name, value, options) {
             </div>
             <div id="content">
                 <ul id="tree">
-                    <li xmlns="" class="level top ignored open">
+                    <li xmlns="" class="level top failed open">
                         <span><em class="time">
-                                <div class="time">13.08 s</div>
+                                <div class="time">12.92 s</div>
                             </em>test_suite_1_login_instituciones</span>
                         <ul>
                             <li class="level suite ignored open">
                                 <span><em class="time">
-                                        <div class="time">0 ms</div>
+                                        <div class="time">1 ms</div>
                                     </em>test1_verificar_acceso_a_la_pagina</span>
                                 <ul>
                                     <li class="level test ignored open">
@@ -623,7 +623,7 @@ jQuery.cookie = function(name, value, options) {
                                     </li>
                                     <li class="level test ignored open">
                                         <span><em class="time">
-                                                <div class="time">0 ms</div>
+                                                <div class="time">1 ms</div>
                                             </em><em class="status">ignored</em>(edge)</span>
                                         <ul>
                                             <li class="text">
@@ -633,38 +633,47 @@ jQuery.cookie = function(name, value, options) {
                                     </li>
                                 </ul>
                             </li>
-                            <li class="level suite open">
+                            <li class="level suite failed open">
                                 <span><em class="time">
-                                        <div class="time">13.08 s</div>
+                                        <div class="time">12.92 s</div>
                                     </em>test2_realizar_login</span>
                                 <ul>
-                                    <li class="level test">
+                                    <li class="level test failed open">
                                         <span><em class="time">
-                                                <div class="time">4.79 s</div>
-                                            </em><em class="status">passed</em>(chrome)</span>
+                                                <div class="time">2.84 s</div>
+                                            </em><em class="status">failed</em>(chrome)</span>
                                         <ul>
                                             <li class="text">
-                                                <span class="stdout">PASSED [  9%]<br/></span>
+                                                <span class="stdout">FAILED [  9%]<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stderr">test_suite_1_login_instituciones.py:50 (test2_realizar_login[chrome])<br/>'Extranet OSDE - Página inicial' != 'Extranet OSDE - Página inicia'<br/>driver = <selenium.webdriver.chrome.webdriver.WebDriver (session="75c45eeb11c306f96c535a750c2b1c13")><br/>    def test2_realizar_login(driver):<br/>        page_login = Login_Page(driver)<br/>        page_login.seleccionar_perfil()<br/>        page_login.ingresar_usuario(data.usuario_i)<br/>        page_login.ingresar_password(data.password_i)<br/>        page_login.click_ingresar()<br/>        page_login.seleccionar_filial()<br/>    <br/>>       assert driver.title == assert_home<br/>E       AssertionError: assert 'Extranet OSDE - Página inicial' == 'Extranet OSDE - Página inicia'<br/>E         <br/>E         - Extranet OSDE - Página inicia<br/>E         + Extranet OSDE - Página inicial<br/>E         ?                              +<br/>test_suite_1_login_instituciones.py:59: AssertionError<br/></span>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="level test">
+                                    <li class="level test failed open">
                                         <span><em class="time">
-                                                <div class="time">5.16 s</div>
-                                            </em><em class="status">passed</em>(firefox)</span>
+                                                <div class="time">7.43 s</div>
+                                            </em><em class="status">failed</em>(firefox)</span>
                                         <ul>
                                             <li class="text">
-                                                <span class="stdout">PASSED [ 11%]<br/></span>
+                                                <span class="stdout">FAILED [ 11%]<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stderr">test_suite_1_login_instituciones.py:50 (test2_realizar_login[firefox])<br/>'Extranet OSDE - Página inicial' != 'Extranet OSDE - Página inicia'<br/>driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="f06b4117-02bf-4550-89fc-2013b12ad359")><br/>    def test2_realizar_login(driver):<br/>        page_login = Login_Page(driver)<br/>        page_login.seleccionar_perfil()<br/>        page_login.ingresar_usuario(data.usuario_i)<br/>        page_login.ingresar_password(data.password_i)<br/>        page_login.click_ingresar()<br/>        page_login.seleccionar_filial()<br/>    <br/>>       assert driver.title == assert_home<br/>E       AssertionError: assert 'Extranet OSDE - Página inicial' == 'Extranet OSDE - Página inicia'<br/>E         <br/>E         - Extranet OSDE - Página inicia<br/>E         + Extranet OSDE - Página inicial<br/>E         ?                              +<br/>test_suite_1_login_instituciones.py:59: AssertionError<br/></span>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="level test">
+                                    <li class="level test failed open">
                                         <span><em class="time">
-                                                <div class="time">3.13 s</div>
-                                            </em><em class="status">passed</em>(edge)</span>
+                                                <div class="time">2.64 s</div>
+                                            </em><em class="status">failed</em>(edge)</span>
                                         <ul>
                                             <li class="text">
-                                                <span class="stdout">PASSED   [ 14%]<br/></span>
+                                                <span class="stdout">FAILED   [ 14%]<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stderr">test_suite_1_login_instituciones.py:50 (test2_realizar_login[edge])<br/>'Extranet OSDE - Página inicial' != 'Extranet OSDE - Página inicia'<br/>driver = <selenium.webdriver.edge.webdriver.WebDriver (session="fd5c5736d168adb3e2117d0135641014")><br/>    def test2_realizar_login(driver):<br/>        page_login = Login_Page(driver)<br/>        page_login.seleccionar_perfil()<br/>        page_login.ingresar_usuario(data.usuario_i)<br/>        page_login.ingresar_password(data.password_i)<br/>        page_login.click_ingresar()<br/>        page_login.seleccionar_filial()<br/>    <br/>>       assert driver.title == assert_home<br/>E       AssertionError: assert 'Extranet OSDE - Página inicial' == 'Extranet OSDE - Página inicia'<br/>E         <br/>E         - Extranet OSDE - Página inicia<br/>E         + Extranet OSDE - Página inicial<br/>E         ?                              +<br/>test_suite_1_login_instituciones.py:59: AssertionError<br/></span>
                                             </li>
                                         </ul>
                                     </li>
@@ -674,30 +683,27 @@ jQuery.cookie = function(name, value, options) {
                     </li>
                     <li class="level top failed open">
                         <span><em class="time">
-                                <div class="time">2 m 24 s</div>
+                                <div class="time">1 m 47 s</div>
                             </em>test_suite_2_home</span>
                         <ul>
-                            <li class="level suite failed open">
+                            <li class="level suite open">
                                 <span><em class="time">
-                                        <div class="time">13.48 s</div>
+                                        <div class="time">4.37 s</div>
                                     </em>test3_acceder_mi_perfil</span>
                                 <ul>
-                                    <li class="level test failed open">
+                                    <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">10.03 s</div>
-                                            </em><em class="status">failed</em>(chrome)</span>
+                                                <div class="time">1.37 s</div>
+                                            </em><em class="status">passed</em>(chrome)</span>
                                         <ul>
                                             <li class="text">
-                                                <span class="stdout">FAILED             [ 16%]<br/></span>
-                                            </li>
-                                            <li class="text">
-                                                <span class="stderr">test_suite_2_home.py:75 (test3_acceder_mi_perfil[chrome])driver = <selenium.webdriver.chrome.webdriver.WebDriver (session="586468250f3d0e7eb916b80bf138f2bf")><br/>    def test3_acceder_mi_perfil(driver):<br/>        acceder_mi_perfil = Home_page(driver)<br/>>       acceder_mi_perfil.acceder_Mi_Perfil()<br/>test_suite_2_home.py:78: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>..\Pages\page_home.py:15: in acceder_Mi_Perfil<br/>    mi_perfil = wait.until(EC.element_to_be_clickable(self.driver.find_element(*self.mi_perfil_locator)))<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:742: in find_element<br/>    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:348: in execute<br/>    self.error_handler.check_response(response)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001F7A18B3DA0><br/>response = {'status': 404, 'value': '{"value":{"error":"no such element","message":"no such element: Unable to locate element: {\...07FF63645A574]\\n\\tBaseThreadInitThunk [0x00007FFA12237344+20]\\n\\tRtlUserThreadStart [0x00007FFA12E226B1+33]\\n"}}'}<br/>    def check_response(self, response: Dict[str, Any]) -> None:<br/>        """Checks that a JSON response from the WebDriver does not have an<br/>        error.<br/>    <br/>        :Args:<br/>         - response - The JSON response from the WebDriver server as a dictionary<br/>           object.<br/>    <br/>        :Raises: If the response contains an error message.<br/>        """<br/>        status = response.get("status", None)<br/>        if not status or status == ErrorCode.SUCCESS:<br/>            return<br/>        value = None<br/>        message = response.get("message", "")<br/>        screen: str = response.get("screen", "")<br/>        stacktrace = None<br/>        if isinstance(status, int):<br/>            value_json = response.get("value", None)<br/>            if value_json and isinstance(value_json, str):<br/>                import json<br/>    <br/>                try:<br/>                    value = json.loads(value_json)<br/>                    if len(value) == 1:<br/>                        value = value["value"]<br/>                    status = value.get("error", None)<br/>                    if not status:<br/>                        status = value.get("status", ErrorCode.UNKNOWN_ERROR)<br/>                        message = value.get("value") or value.get("message")<br/>                        if not isinstance(message, str):<br/>                            value = message<br/>                            message = message.get("message")<br/>                    else:<br/>                        message = value.get("message", None)<br/>                except ValueError:<br/>                    pass<br/>    <br/>        exception_class: Type[WebDriverException]<br/>        e = ErrorCode()<br/>        error_codes = [item for item in dir(e) if not item.startswith("__")]<br/>        for error_code in error_codes:<br/>            error_info = getattr(ErrorCode, error_code)<br/>            if isinstance(error_info, list) and status in error_info:<br/>                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)<br/>                break<br/>        else:<br/>            exception_class = WebDriverException<br/>    <br/>        if not value:<br/>            value = response["value"]<br/>        if isinstance(value, str):<br/>            raise exception_class(value)<br/>        if message == "" and "message" in value:<br/>            message = value["message"]<br/>    <br/>        screen = None  # type: ignore[assignment]<br/>        if "screen" in value:<br/>            screen = value["screen"]<br/>    <br/>        stacktrace = None<br/>        st_value = value.get("stackTrace") or value.get("stacktrace")<br/>        if st_value:<br/>            if isinstance(st_value, str):<br/>                stacktrace = st_value.split("\n")<br/>            else:<br/>                stacktrace = []<br/>                try:<br/>                    for frame in st_value:<br/>                        line = frame.get("lineNumber", "")<br/>                        file = frame.get("fileName", "<anonymous>")<br/>                        if line:<br/>                            file = f"{file}:{line}"<br/>                        meth = frame.get("methodName", "<anonymous>")<br/>                        if "className" in frame:<br/>                            meth = f"{frame['className']}.{meth}"<br/>                        msg = "    at %s (%s)"<br/>                        msg = msg % (meth, file)<br/>                        stacktrace.append(msg)<br/>                except TypeError:<br/>                    pass<br/>        if exception_class == UnexpectedAlertPresentException:<br/>            alert_text = None<br/>            if "data" in value:<br/>                alert_text = value["data"].get("text")<br/>            elif "alert" in value:<br/>                alert_text = value["alert"].get("text")<br/>            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here<br/>>       raise exception_class(message, screen, stacktrace)<br/>E       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="miPerfil"]/div[3]/a"}<br/>E         (Session info: chrome=124.0.6367.61); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception<br/>E       Stacktrace:<br/>E       	GetHandleVerifier [0x00007FF6367BF922+3045234]<br/>E       	(No symbol) [0x00007FF636463652]<br/>E       	(No symbol) [0x00007FF636327564]<br/>E       	(No symbol) [0x00007FF636375F9D]<br/>E       	(No symbol) [0x00007FF63637606C]<br/>E       	(No symbol) [0x00007FF6363BBDD7]<br/>E       	(No symbol) [0x00007FF636399DEF]<br/>E       	(No symbol) [0x00007FF6363B91C4]<br/>E       	(No symbol) [0x00007FF636399B53]<br/>E       	(No symbol) [0x00007FF63636813C]<br/>E       	(No symbol) [0x00007FF636368D71]<br/>E       	GetHandleVerifier [0x00007FF6367EE89D+3237613]<br/>E       	GetHandleVerifier [0x00007FF636830BA7+3508727]<br/>E       	GetHandleVerifier [0x00007FF63682976F+3478975]<br/>E       	GetHandleVerifier [0x00007FF63659F1C6+815126]<br/>E       	(No symbol) [0x00007FF63646ED0F]<br/>E       	(No symbol) [0x00007FF636469854]<br/>E       	(No symbol) [0x00007FF6364699E2]<br/>E       	(No symbol) [0x00007FF63645A574]<br/>E       	BaseThreadInitThunk [0x00007FFA12237344+20]<br/>E       	RtlUserThreadStart [0x00007FFA12E226B1+33]<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:229: NoSuchElementException<br/></span>
+                                                <span class="stdout">PASSED             [ 16%]<br/></span>
                                             </li>
                                         </ul>
                                     </li>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">2.06 s</div>
+                                                <div class="time">1.87 s</div>
                                             </em><em class="status">passed</em>(firefox)</span>
                                         <ul>
                                             <li class="text">
@@ -707,7 +713,7 @@ jQuery.cookie = function(name, value, options) {
                                     </li>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">1.39 s</div>
+                                                <div class="time">1.13 s</div>
                                             </em><em class="status">passed</em>(edge)</span>
                                         <ul>
                                             <li class="text">
@@ -719,12 +725,12 @@ jQuery.cookie = function(name, value, options) {
                             </li>
                             <li class="level suite open">
                                 <span><em class="time">
-                                        <div class="time">12.88 s</div>
+                                        <div class="time">10.41 s</div>
                                     </em>test4_acceder_datos_contacto</span>
                                 <ul>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">5.28 s</div>
+                                                <div class="time">5.59 s</div>
                                             </em><em class="status">passed</em>(chrome)</span>
                                         <ul>
                                             <li class="text">
@@ -734,7 +740,7 @@ jQuery.cookie = function(name, value, options) {
                                     </li>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">3.20 s</div>
+                                                <div class="time">2.06 s</div>
                                             </em><em class="status">passed</em>(firefox)</span>
                                         <ul>
                                             <li class="text">
@@ -744,7 +750,7 @@ jQuery.cookie = function(name, value, options) {
                                     </li>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">4.40 s</div>
+                                                <div class="time">2.76 s</div>
                                             </em><em class="status">passed</em>(edge)</span>
                                         <ul>
                                             <li class="text">
@@ -754,38 +760,38 @@ jQuery.cookie = function(name, value, options) {
                                     </li>
                                 </ul>
                             </li>
-                            <li class="level suite open">
+                            <li class="level suite ignored open">
                                 <span><em class="time">
-                                        <div class="time">8.36 s</div>
+                                        <div class="time">2 ms</div>
                                     </em>test5_acceder_form_contacto</span>
                                 <ul>
-                                    <li class="level test">
+                                    <li class="level test ignored open">
                                         <span><em class="time">
-                                                <div class="time">2.82 s</div>
-                                            </em><em class="status">passed</em>(chrome)</span>
+                                                <div class="time">0 ms</div>
+                                            </em><em class="status">ignored</em>(chrome)</span>
                                         <ul>
                                             <li class="text">
-                                                <span class="stdout">PASSED         [ 30%]<br/></span>
+                                                <span class="stdout">SKIPPED (Este<br/>modulo no se encuentra en el ambiente productivo)                        [ 30%]<br/></span>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="level test">
+                                    <li class="level test ignored open">
                                         <span><em class="time">
-                                                <div class="time">2.57 s</div>
-                                            </em><em class="status">passed</em>(firefox)</span>
+                                                <div class="time">1 ms</div>
+                                            </em><em class="status">ignored</em>(firefox)</span>
                                         <ul>
                                             <li class="text">
-                                                <span class="stdout">PASSED        [ 33%]<br/></span>
+                                                <span class="stdout">SKIPPED (Este<br/>modulo no se encuentra en el ambiente productivo)                        [ 33%]<br/></span>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="level test">
+                                    <li class="level test ignored open">
                                         <span><em class="time">
-                                                <div class="time">2.97 s</div>
-                                            </em><em class="status">passed</em>(edge)</span>
+                                                <div class="time">1 ms</div>
+                                            </em><em class="status">ignored</em>(edge)</span>
                                         <ul>
                                             <li class="text">
-                                                <span class="stdout">PASSED           [ 35%]<br/></span>
+                                                <span class="stdout">SKIPPED (Este<br/>modulo no se encuentra en el ambiente productivo)                        [ 35%]<br/></span>
                                             </li>
                                         </ul>
                                     </li>
@@ -793,12 +799,12 @@ jQuery.cookie = function(name, value, options) {
                             </li>
                             <li class="level suite open">
                                 <span><em class="time">
-                                        <div class="time">11.11 s</div>
+                                        <div class="time">7.49 s</div>
                                     </em>test6_acceder_consultorios</span>
                                 <ul>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">5.79 s</div>
+                                                <div class="time">2.11 s</div>
                                             </em><em class="status">passed</em>(chrome)</span>
                                         <ul>
                                             <li class="text">
@@ -808,7 +814,7 @@ jQuery.cookie = function(name, value, options) {
                                     </li>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">2.69 s</div>
+                                                <div class="time">2.81 s</div>
                                             </em><em class="status">passed</em>(firefox)</span>
                                         <ul>
                                             <li class="text">
@@ -818,7 +824,7 @@ jQuery.cookie = function(name, value, options) {
                                     </li>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">2.63 s</div>
+                                                <div class="time">2.57 s</div>
                                             </em><em class="status">passed</em>(edge)</span>
                                         <ul>
                                             <li class="text">
@@ -830,12 +836,12 @@ jQuery.cookie = function(name, value, options) {
                             </li>
                             <li class="level suite open">
                                 <span><em class="time">
-                                        <div class="time">8.69 s</div>
+                                        <div class="time">4.58 s</div>
                                     </em>test7_acceder_ADMUN</span>
                                 <ul>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">4.66 s</div>
+                                                <div class="time">2.17 s</div>
                                             </em><em class="status">passed</em>(chrome)</span>
                                         <ul>
                                             <li class="text">
@@ -845,7 +851,7 @@ jQuery.cookie = function(name, value, options) {
                                     </li>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">1.69 s</div>
+                                                <div class="time">1.41 s</div>
                                             </em><em class="status">passed</em>(firefox)</span>
                                         <ul>
                                             <li class="text">
@@ -855,7 +861,7 @@ jQuery.cookie = function(name, value, options) {
                                     </li>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">2.34 s</div>
+                                                <div class="time">990 ms</div>
                                             </em><em class="status">passed</em>(edge)</span>
                                         <ul>
                                             <li class="text">
@@ -867,12 +873,12 @@ jQuery.cookie = function(name, value, options) {
                             </li>
                             <li class="level suite failed open">
                                 <span><em class="time">
-                                        <div class="time">17.93 s</div>
+                                        <div class="time">10.16 s</div>
                                     </em>test8_acceder_solicitudes</span>
                                 <ul>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">3.97 s</div>
+                                                <div class="time">2.19 s</div>
                                             </em><em class="status">passed</em>(chrome)</span>
                                         <ul>
                                             <li class="text">
@@ -882,20 +888,20 @@ jQuery.cookie = function(name, value, options) {
                                     </li>
                                     <li class="level test failed open">
                                         <span><em class="time">
-                                                <div class="time">11.05 s</div>
+                                                <div class="time">5.75 s</div>
                                             </em><em class="status">failed</em>(firefox)</span>
                                         <ul>
                                             <li class="text">
                                                 <span class="stdout">FAILED          [ 54%]<br/></span>
                                             </li>
                                             <li class="text">
-                                                <span class="stderr">test_suite_2_home.py:126 (test8_acceder_solicitudes[firefox])driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="6f101192-c2a0-464a-a2bb-fc94da034b26")><br/>    def test8_acceder_solicitudes(driver):<br/>        acceder_solicitudes = Home_page(driver)<br/>        acceder_solicitudes.acceder_herramientas()<br/>>       acceder_solicitudes.acceder_solicitudes()<br/>test_suite_2_home.py:130: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>..\Pages\page_home.py:51: in acceder_solicitudes<br/>    solicitudes = wait.until(EC.element_to_be_clickable(self.driver.find_element(*self.solicitudes_locator)))<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>self = <selenium.webdriver.support.wait.WebDriverWait (session="6f101192-c2a0-464a-a2bb-fc94da034b26")><br/>method = <function element_to_be_clickable.<locals>._predicate at 0x000001F7A4341BC0><br/>message = ''<br/>    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = "") -> T:<br/>        """Calls the method provided with the driver as an argument until the \<br/>        return value does not evaluate to ``False``.<br/>    <br/>        :param method: callable(WebDriver)<br/>        :param message: optional message for :exc:`TimeoutException`<br/>        :returns: the result of the last call to `method`<br/>        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs<br/>        """<br/>        screen = None<br/>        stacktrace = None<br/>    <br/>        end_time = time.monotonic() + self._timeout<br/>        while True:<br/>            try:<br/>                value = method(self._driver)<br/>                if value:<br/>                    return value<br/>            except self._ignored_exceptions as exc:<br/>                screen = getattr(exc, "screen", None)<br/>                stacktrace = getattr(exc, "stacktrace", None)<br/>            time.sleep(self._poll)<br/>            if time.monotonic() > end_time:<br/>                break<br/>>       raise TimeoutException(message, screen, stacktrace)<br/>E       selenium.common.exceptions.TimeoutException: Message:<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\support\wait.py:105: TimeoutException<br/></span>
+                                                <span class="stderr">test_suite_2_home.py:123 (test8_acceder_solicitudes[firefox])driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="334254d0-1491-470b-a4f5-641b0baa68fc")><br/>    def test8_acceder_solicitudes(driver):<br/>        acceder_solicitudes = Home_page(driver)<br/>        acceder_solicitudes.acceder_herramientas()<br/>>       acceder_solicitudes.acceder_solicitudes()<br/>test_suite_2_home.py:127: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>..\Pages\page_home.py:34: in acceder_solicitudes<br/>    solicitudes = self.driver.find_element(*self.solicitudes_locator)<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:742: in find_element<br/>    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:348: in execute<br/>    self.error_handler.check_response(response)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000002729953A0C0><br/>response = {'status': 404, 'value': '{"value":{"error":"no such element","message":"Unable to locate element: Solicitudes","stack.../content/shared/webdriver/Errors.sys.mjs:510:5\\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\\n"}}'}<br/>    def check_response(self, response: Dict[str, Any]) -> None:<br/>        """Checks that a JSON response from the WebDriver does not have an<br/>        error.<br/>    <br/>        :Args:<br/>         - response - The JSON response from the WebDriver server as a dictionary<br/>           object.<br/>    <br/>        :Raises: If the response contains an error message.<br/>        """<br/>        status = response.get("status", None)<br/>        if not status or status == ErrorCode.SUCCESS:<br/>            return<br/>        value = None<br/>        message = response.get("message", "")<br/>        screen: str = response.get("screen", "")<br/>        stacktrace = None<br/>        if isinstance(status, int):<br/>            value_json = response.get("value", None)<br/>            if value_json and isinstance(value_json, str):<br/>                import json<br/>    <br/>                try:<br/>                    value = json.loads(value_json)<br/>                    if len(value) == 1:<br/>                        value = value["value"]<br/>                    status = value.get("error", None)<br/>                    if not status:<br/>                        status = value.get("status", ErrorCode.UNKNOWN_ERROR)<br/>                        message = value.get("value") or value.get("message")<br/>                        if not isinstance(message, str):<br/>                            value = message<br/>                            message = message.get("message")<br/>                    else:<br/>                        message = value.get("message", None)<br/>                except ValueError:<br/>                    pass<br/>    <br/>        exception_class: Type[WebDriverException]<br/>        e = ErrorCode()<br/>        error_codes = [item for item in dir(e) if not item.startswith("__")]<br/>        for error_code in error_codes:<br/>            error_info = getattr(ErrorCode, error_code)<br/>            if isinstance(error_info, list) and status in error_info:<br/>                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)<br/>                break<br/>        else:<br/>            exception_class = WebDriverException<br/>    <br/>        if not value:<br/>            value = response["value"]<br/>        if isinstance(value, str):<br/>            raise exception_class(value)<br/>        if message == "" and "message" in value:<br/>            message = value["message"]<br/>    <br/>        screen = None  # type: ignore[assignment]<br/>        if "screen" in value:<br/>            screen = value["screen"]<br/>    <br/>        stacktrace = None<br/>        st_value = value.get("stackTrace") or value.get("stacktrace")<br/>        if st_value:<br/>            if isinstance(st_value, str):<br/>                stacktrace = st_value.split("\n")<br/>            else:<br/>                stacktrace = []<br/>                try:<br/>                    for frame in st_value:<br/>                        line = frame.get("lineNumber", "")<br/>                        file = frame.get("fileName", "<anonymous>")<br/>                        if line:<br/>                            file = f"{file}:{line}"<br/>                        meth = frame.get("methodName", "<anonymous>")<br/>                        if "className" in frame:<br/>                            meth = f"{frame['className']}.{meth}"<br/>                        msg = "    at %s (%s)"<br/>                        msg = msg % (meth, file)<br/>                        stacktrace.append(msg)<br/>                except TypeError:<br/>                    pass<br/>        if exception_class == UnexpectedAlertPresentException:<br/>            alert_text = None<br/>            if "data" in value:<br/>                alert_text = value["data"].get("text")<br/>            elif "alert" in value:<br/>                alert_text = value["alert"].get("text")<br/>            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here<br/>>       raise exception_class(message, screen, stacktrace)<br/>E       selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: Solicitudes; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception<br/>E       Stacktrace:<br/>E       RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8<br/>E       WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:192:5<br/>E       NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:510:5<br/>E       dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:229: NoSuchElementException<br/></span>
                                             </li>
                                         </ul>
                                     </li>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">2.91 s</div>
+                                                <div class="time">2.22 s</div>
                                             </em><em class="status">passed</em>(edge)</span>
                                         <ul>
                                             <li class="text">
@@ -907,12 +913,12 @@ jQuery.cookie = function(name, value, options) {
                             </li>
                             <li class="level suite open">
                                 <span><em class="time">
-                                        <div class="time">12.52 s</div>
+                                        <div class="time">7.53 s</div>
                                     </em>test9_acceder_envio_consultas</span>
                                 <ul>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">6.37 s</div>
+                                                <div class="time">2.22 s</div>
                                             </em><em class="status">passed</em>(chrome)</span>
                                         <ul>
                                             <li class="text">
@@ -922,7 +928,7 @@ jQuery.cookie = function(name, value, options) {
                                     </li>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">3.15 s</div>
+                                                <div class="time">2.43 s</div>
                                             </em><em class="status">passed</em>(firefox)</span>
                                         <ul>
                                             <li class="text">
@@ -932,7 +938,7 @@ jQuery.cookie = function(name, value, options) {
                                     </li>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">3.01 s</div>
+                                                <div class="time">2.88 s</div>
                                             </em><em class="status">passed</em>(edge)</span>
                                         <ul>
                                             <li class="text">
@@ -942,14 +948,14 @@ jQuery.cookie = function(name, value, options) {
                                     </li>
                                 </ul>
                             </li>
-                            <li class="level suite open">
+                            <li class="level suite failed open">
                                 <span><em class="time">
-                                        <div class="time">15.54 s</div>
+                                        <div class="time">45.76 s</div>
                                     </em>test10_acceder_envio_doc</span>
                                 <ul>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">7.30 s</div>
+                                                <div class="time">2.25 s</div>
                                             </em><em class="status">passed</em>(chrome)</span>
                                         <ul>
                                             <li class="text">
@@ -957,60 +963,66 @@ jQuery.cookie = function(name, value, options) {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="level test">
+                                    <li class="level test failed open">
                                         <span><em class="time">
-                                                <div class="time">5.39 s</div>
-                                            </em><em class="status">passed</em>(firefox)</span>
+                                                <div class="time">6.05 s</div>
+                                            </em><em class="status">failed</em>(firefox)</span>
                                         <ul>
                                             <li class="text">
-                                                <span class="stdout">PASSED           [ 69%]<br/></span>
+                                                <span class="stdout">FAILED           [ 69%]<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stderr">test_suite_2_home.py:146 (test10_acceder_envio_doc[firefox])driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="6c80ec18-6a21-4ecf-bcf9-04d8ab8f32eb")><br/>    def test10_acceder_envio_doc(driver):<br/>        acceder_envio_doc = Home_page(driver)<br/>        acceder_envio_doc.acceder_herramientas()<br/>>       acceder_envio_doc.acceder_envio_doc()<br/>test_suite_2_home.py:150: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>..\Pages\page_home.py:42: in acceder_envio_doc<br/>    envio_doc = self.driver.find_element(*self.envio_doc_locator)<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:742: in find_element<br/>    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:348: in execute<br/>    self.error_handler.check_response(response)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x0000027296DEC1D0><br/>response = {'status': 404, 'value': '{"value":{"error":"no such element","message":"Unable to locate element: Envío de Documentac.../content/shared/webdriver/Errors.sys.mjs:510:5\\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\\n"}}'}<br/>    def check_response(self, response: Dict[str, Any]) -> None:<br/>        """Checks that a JSON response from the WebDriver does not have an<br/>        error.<br/>    <br/>        :Args:<br/>         - response - The JSON response from the WebDriver server as a dictionary<br/>           object.<br/>    <br/>        :Raises: If the response contains an error message.<br/>        """<br/>        status = response.get("status", None)<br/>        if not status or status == ErrorCode.SUCCESS:<br/>            return<br/>        value = None<br/>        message = response.get("message", "")<br/>        screen: str = response.get("screen", "")<br/>        stacktrace = None<br/>        if isinstance(status, int):<br/>            value_json = response.get("value", None)<br/>            if value_json and isinstance(value_json, str):<br/>                import json<br/>    <br/>                try:<br/>                    value = json.loads(value_json)<br/>                    if len(value) == 1:<br/>                        value = value["value"]<br/>                    status = value.get("error", None)<br/>                    if not status:<br/>                        status = value.get("status", ErrorCode.UNKNOWN_ERROR)<br/>                        message = value.get("value") or value.get("message")<br/>                        if not isinstance(message, str):<br/>                            value = message<br/>                            message = message.get("message")<br/>                    else:<br/>                        message = value.get("message", None)<br/>                except ValueError:<br/>                    pass<br/>    <br/>        exception_class: Type[WebDriverException]<br/>        e = ErrorCode()<br/>        error_codes = [item for item in dir(e) if not item.startswith("__")]<br/>        for error_code in error_codes:<br/>            error_info = getattr(ErrorCode, error_code)<br/>            if isinstance(error_info, list) and status in error_info:<br/>                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)<br/>                break<br/>        else:<br/>            exception_class = WebDriverException<br/>    <br/>        if not value:<br/>            value = response["value"]<br/>        if isinstance(value, str):<br/>            raise exception_class(value)<br/>        if message == "" and "message" in value:<br/>            message = value["message"]<br/>    <br/>        screen = None  # type: ignore[assignment]<br/>        if "screen" in value:<br/>            screen = value["screen"]<br/>    <br/>        stacktrace = None<br/>        st_value = value.get("stackTrace") or value.get("stacktrace")<br/>        if st_value:<br/>            if isinstance(st_value, str):<br/>                stacktrace = st_value.split("\n")<br/>            else:<br/>                stacktrace = []<br/>                try:<br/>                    for frame in st_value:<br/>                        line = frame.get("lineNumber", "")<br/>                        file = frame.get("fileName", "<anonymous>")<br/>                        if line:<br/>                            file = f"{file}:{line}"<br/>                        meth = frame.get("methodName", "<anonymous>")<br/>                        if "className" in frame:<br/>                            meth = f"{frame['className']}.{meth}"<br/>                        msg = "    at %s (%s)"<br/>                        msg = msg % (meth, file)<br/>                        stacktrace.append(msg)<br/>                except TypeError:<br/>                    pass<br/>        if exception_class == UnexpectedAlertPresentException:<br/>            alert_text = None<br/>            if "data" in value:<br/>                alert_text = value["data"].get("text")<br/>            elif "alert" in value:<br/>                alert_text = value["alert"].get("text")<br/>            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here<br/>>       raise exception_class(message, screen, stacktrace)<br/>E       selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: Envío de Documentación; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception<br/>E       Stacktrace:<br/>E       RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8<br/>E       WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:192:5<br/>E       NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:510:5<br/>E       dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:229: NoSuchElementException<br/></span>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="level test">
+                                    <li class="level test failed open">
                                         <span><em class="time">
-                                                <div class="time">2.85 s</div>
-                                            </em><em class="status">passed</em>(edge)</span>
+                                                <div class="time">37.46 s</div>
+                                            </em><em class="status">failed</em>(edge)</span>
                                         <ul>
                                             <li class="text">
-                                                <span class="stdout">PASSED              [ 71%]<br/></span>
+                                                <span class="stdout">ERROR               [ 71%]<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stderr">test setup failedrequest = <SubRequest 'driver' for <Function test10_acceder_envio_doc[edge]>><br/>    @pytest.fixture(params=["chrome", "firefox", "edge"])<br/>    def driver(request):<br/>        if request.param == "chrome":<br/>            chrome_options = webdriver.ChromeOptions()<br/>            chrome_options.add_argument(data.ignorar_certificados)<br/>            chrome_options.add_argument(data.navegador_incognito)<br/>            chrome_options.add_argument(data.permitir_contenido_no_seguro)<br/>            chrome_options.add_argument("--headless")<br/>            driver = webdriver.Chrome(options=chrome_options)<br/>            driver.get(data.url_base)<br/>            driver.implicitly_wait(time_to_wait=5)<br/>            page_login = Login_Page(driver)<br/>            page_login.seleccionar_perfil()<br/>            page_login.ingresar_usuario(data.usuario_i)<br/>            page_login.ingresar_password(data.password_i)<br/>            page_login.click_ingresar()<br/>            page_login.seleccionar_filial()<br/>            yield driver<br/>            driver.close()<br/>            driver.quit()<br/>        elif request.param == "firefox":<br/>            firefox_options = webdriver.FirefoxOptions()<br/>            firefox_options.add_argument(data.ignorar_certificados)<br/>            firefox_options.add_argument(data.navegador_incognito)<br/>            firefox_options.add_argument(data.permitir_contenido_no_seguro)<br/>            firefox_options.add_argument("--headless")<br/>            driver = webdriver.Firefox(options=firefox_options)<br/>            driver.get(data.url_base)<br/>            driver.implicitly_wait(time_to_wait=5)<br/>            page_login = Login_Page(driver)<br/>            page_login.seleccionar_perfil()<br/>            page_login.ingresar_usuario(data.usuario_i)<br/>            page_login.ingresar_password(data.password_i)<br/>            page_login.click_ingresar()<br/>            page_login.seleccionar_filial()<br/>            yield driver<br/>            driver.close()<br/>            driver.quit()<br/>        elif request.param == "edge":<br/>            edge_options = webdriver.EdgeOptions()<br/>            edge_options.add_argument(data.ignorar_certificados)<br/>            edge_options.add_argument(data.navegador_incognito)<br/>            edge_options.add_argument(data.permitir_contenido_no_seguro)<br/>            edge_options.add_argument("--headless")<br/>            driver = webdriver.Edge(options=edge_options)<br/>            driver.get(data.url_base)<br/>            driver.implicitly_wait(time_to_wait=5)<br/>            page_login = Login_Page(driver)<br/>            page_login.seleccionar_perfil()<br/>            page_login.ingresar_usuario(data.usuario_i)<br/>            page_login.ingresar_password(data.password_i)<br/>            page_login.click_ingresar()<br/>>           page_login.seleccionar_filial()<br/>test_suite_2_home.py:64: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>..\Pages\page_login.py:26: in seleccionar_filial<br/>    filial = self.driver.find_element(*self.filial_locator)<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:742: in find_element<br/>    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:348: in execute<br/>    self.error_handler.check_response(response)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x0000027299920A70><br/>response = {'status': 404, 'value': '{"value":{"error":"no such element","message":"no such element: Unable to locate element: {\...79B255+189877]\\n\\tBaseThreadInitThunk [0x00007FF8A24A7344+20]\\n\\tRtlUserThreadStart [0x00007FF8A37026B1+33]\\n"}}'}<br/>    def check_response(self, response: Dict[str, Any]) -> None:<br/>        """Checks that a JSON response from the WebDriver does not have an<br/>        error.<br/>    <br/>        :Args:<br/>         - response - The JSON response from the WebDriver server as a dictionary<br/>           object.<br/>    <br/>        :Raises: If the response contains an error message.<br/>        """<br/>        status = response.get("status", None)<br/>        if not status or status == ErrorCode.SUCCESS:<br/>            return<br/>        value = None<br/>        message = response.get("message", "")<br/>        screen: str = response.get("screen", "")<br/>        stacktrace = None<br/>        if isinstance(status, int):<br/>            value_json = response.get("value", None)<br/>            if value_json and isinstance(value_json, str):<br/>                import json<br/>    <br/>                try:<br/>                    value = json.loads(value_json)<br/>                    if len(value) == 1:<br/>                        value = value["value"]<br/>                    status = value.get("error", None)<br/>                    if not status:<br/>                        status = value.get("status", ErrorCode.UNKNOWN_ERROR)<br/>                        message = value.get("value") or value.get("message")<br/>                        if not isinstance(message, str):<br/>                            value = message<br/>                            message = message.get("message")<br/>                    else:<br/>                        message = value.get("message", None)<br/>                except ValueError:<br/>                    pass<br/>    <br/>        exception_class: Type[WebDriverException]<br/>        e = ErrorCode()<br/>        error_codes = [item for item in dir(e) if not item.startswith("__")]<br/>        for error_code in error_codes:<br/>            error_info = getattr(ErrorCode, error_code)<br/>            if isinstance(error_info, list) and status in error_info:<br/>                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)<br/>                break<br/>        else:<br/>            exception_class = WebDriverException<br/>    <br/>        if not value:<br/>            value = response["value"]<br/>        if isinstance(value, str):<br/>            raise exception_class(value)<br/>        if message == "" and "message" in value:<br/>            message = value["message"]<br/>    <br/>        screen = None  # type: ignore[assignment]<br/>        if "screen" in value:<br/>            screen = value["screen"]<br/>    <br/>        stacktrace = None<br/>        st_value = value.get("stackTrace") or value.get("stacktrace")<br/>        if st_value:<br/>            if isinstance(st_value, str):<br/>                stacktrace = st_value.split("\n")<br/>            else:<br/>                stacktrace = []<br/>                try:<br/>                    for frame in st_value:<br/>                        line = frame.get("lineNumber", "")<br/>                        file = frame.get("fileName", "<anonymous>")<br/>                        if line:<br/>                            file = f"{file}:{line}"<br/>                        meth = frame.get("methodName", "<anonymous>")<br/>                        if "className" in frame:<br/>                            meth = f"{frame['className']}.{meth}"<br/>                        msg = "    at %s (%s)"<br/>                        msg = msg % (meth, file)<br/>                        stacktrace.append(msg)<br/>                except TypeError:<br/>                    pass<br/>        if exception_class == UnexpectedAlertPresentException:<br/>            alert_text = None<br/>            if "data" in value:<br/>                alert_text = value["data"].get("text")<br/>            elif "alert" in value:<br/>                alert_text = value["alert"].get("text")<br/>            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here<br/>>       raise exception_class(message, screen, stacktrace)<br/>E       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"6001063997-Metropolitana"}<br/>E         (Session info: edge-headless-shell=124.0.2478.80); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception<br/>E       Stacktrace:<br/>E       	GetHandleVerifier [0x00007FF79E80E4E2+63026]<br/>E       	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF79E7A0FB2+213778]<br/>E       	(No symbol) [0x00007FF79E5CE7A7]<br/>E       	(No symbol) [0x00007FF79E6155EE]<br/>E       	(No symbol) [0x00007FF79E6156D6]<br/>E       	(No symbol) [0x00007FF79E650717]<br/>E       	(No symbol) [0x00007FF79E634F1F]<br/>E       	(No symbol) [0x00007FF79E60AE17]<br/>E       	(No symbol) [0x00007FF79E64E313]<br/>E       	(No symbol) [0x00007FF79E634B43]<br/>E       	(No symbol) [0x00007FF79E60A33E]<br/>E       	(No symbol) [0x00007FF79E6094EC]<br/>E       	(No symbol) [0x00007FF79E609EF1]<br/>E       	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF79E9B5704+1025332]<br/>E       	(No symbol) [0x00007FF79E67F29C]<br/>E       	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF79E71BD3C+34028]<br/>E       	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF79E714525+3285]<br/>E       	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF79E9B46C5+1021173]<br/>E       	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF79E7A9A71+249297]<br/>E       	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF79E7A54F4+231508]<br/>E       	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF79E7A562B+231819]<br/>E       	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF79E79B255+189877]<br/>E       	BaseThreadInitThunk [0x00007FF8A24A7344+20]<br/>E       	RtlUserThreadStart [0x00007FF8A37026B1+33]<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:229: NoSuchElementException<br/></span>
                                             </li>
                                         </ul>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="level suite open">
+                            <li class="level suite ignored open">
                                 <span><em class="time">
-                                        <div class="time">12.34 s</div>
+                                        <div class="time">2 ms</div>
                                     </em>test11_acceder_mala_praxis</span>
                                 <ul>
-                                    <li class="level test">
+                                    <li class="level test ignored open">
                                         <span><em class="time">
-                                                <div class="time">5.05 s</div>
-                                            </em><em class="status">passed</em>(chrome)</span>
+                                                <div class="time">0 ms</div>
+                                            </em><em class="status">ignored</em>(chrome)</span>
                                         <ul>
                                             <li class="text">
-                                                <span class="stdout">PASSED          [ 73%]<br/></span>
+                                                <span class="stdout">SKIPPED (Este<br/>modulo no se encuentra en el ambiente productivo)                        [ 73%]<br/></span>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="level test">
+                                    <li class="level test ignored open">
                                         <span><em class="time">
-                                                <div class="time">2.88 s</div>
-                                            </em><em class="status">passed</em>(firefox)</span>
+                                                <div class="time">1 ms</div>
+                                            </em><em class="status">ignored</em>(firefox)</span>
                                         <ul>
                                             <li class="text">
-                                                <span class="stdout">PASSED         [ 76%]<br/></span>
+                                                <span class="stdout">SKIPPED (Este<br/>modulo no se encuentra en el ambiente productivo)                        [ 76%]<br/></span>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="level test">
+                                    <li class="level test ignored open">
                                         <span><em class="time">
-                                                <div class="time">4.41 s</div>
-                                            </em><em class="status">passed</em>(edge)</span>
+                                                <div class="time">1 ms</div>
+                                            </em><em class="status">ignored</em>(edge)</span>
                                         <ul>
                                             <li class="text">
-                                                <span class="stdout">PASSED            [ 78%]<br/></span>
+                                                <span class="stdout">SKIPPED (Este<br/>modulo no se encuentra en el ambiente productivo)                        [ 78%]<br/></span>
                                             </li>
                                         </ul>
                                     </li>
@@ -1018,12 +1030,12 @@ jQuery.cookie = function(name, value, options) {
                             </li>
                             <li class="level suite open">
                                 <span><em class="time">
-                                        <div class="time">6.97 s</div>
+                                        <div class="time">5.98 s</div>
                                     </em>test12_acceder_prestaciones</span>
                                 <ul>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">3.77 s</div>
+                                                <div class="time">1.95 s</div>
                                             </em><em class="status">passed</em>(chrome)</span>
                                         <ul>
                                             <li class="text">
@@ -1033,7 +1045,7 @@ jQuery.cookie = function(name, value, options) {
                                     </li>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">1.59 s</div>
+                                                <div class="time">1.74 s</div>
                                             </em><em class="status">passed</em>(firefox)</span>
                                         <ul>
                                             <li class="text">
@@ -1043,7 +1055,7 @@ jQuery.cookie = function(name, value, options) {
                                     </li>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">1.62 s</div>
+                                                <div class="time">2.29 s</div>
                                             </em><em class="status">passed</em>(edge)</span>
                                         <ul>
                                             <li class="text">
@@ -1055,12 +1067,12 @@ jQuery.cookie = function(name, value, options) {
                             </li>
                             <li class="level suite failed open">
                                 <span><em class="time">
-                                        <div class="time">23.73 s</div>
+                                        <div class="time">10.31 s</div>
                                     </em>test13_acceder_transacciones</span>
                                 <ul>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">3.67 s</div>
+                                                <div class="time">2.87 s</div>
                                             </em><em class="status">passed</em>(chrome)</span>
                                         <ul>
                                             <li class="text">
@@ -1070,27 +1082,24 @@ jQuery.cookie = function(name, value, options) {
                                     </li>
                                     <li class="level test failed open">
                                         <span><em class="time">
-                                                <div class="time">10.01 s</div>
+                                                <div class="time">5.84 s</div>
                                             </em><em class="status">failed</em>(firefox)</span>
                                         <ul>
                                             <li class="text">
                                                 <span class="stdout">FAILED       [ 90%]<br/></span>
                                             </li>
                                             <li class="text">
-                                                <span class="stderr">test_suite_2_home.py:180 (test13_acceder_transacciones[firefox])driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="100341e6-0623-4d9d-9dce-332c572f53c7")><br/>    def test13_acceder_transacciones(driver):<br/>        acceder_transacciones = Home_page(driver)<br/>>       acceder_transacciones.acceder_herramientas()<br/>test_suite_2_home.py:183: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>..\Pages\page_home.py:45: in acceder_herramientas<br/>    herramientas = wait.until(EC.element_to_be_clickable(self.driver.find_element(*self.herramientas_locator)))<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:742: in find_element<br/>    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:348: in execute<br/>    self.error_handler.check_response(response)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001F7A3F259D0><br/>response = {'status': 404, 'value': '{"value":{"error":"no such element","message":"Unable to locate element: /html/body/div[4]/d.../content/shared/webdriver/Errors.sys.mjs:510:5\\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\\n"}}'}<br/>    def check_response(self, response: Dict[str, Any]) -> None:<br/>        """Checks that a JSON response from the WebDriver does not have an<br/>        error.<br/>    <br/>        :Args:<br/>         - response - The JSON response from the WebDriver server as a dictionary<br/>           object.<br/>    <br/>        :Raises: If the response contains an error message.<br/>        """<br/>        status = response.get("status", None)<br/>        if not status or status == ErrorCode.SUCCESS:<br/>            return<br/>        value = None<br/>        message = response.get("message", "")<br/>        screen: str = response.get("screen", "")<br/>        stacktrace = None<br/>        if isinstance(status, int):<br/>            value_json = response.get("value", None)<br/>            if value_json and isinstance(value_json, str):<br/>                import json<br/>    <br/>                try:<br/>                    value = json.loads(value_json)<br/>                    if len(value) == 1:<br/>                        value = value["value"]<br/>                    status = value.get("error", None)<br/>                    if not status:<br/>                        status = value.get("status", ErrorCode.UNKNOWN_ERROR)<br/>                        message = value.get("value") or value.get("message")<br/>                        if not isinstance(message, str):<br/>                            value = message<br/>                            message = message.get("message")<br/>                    else:<br/>                        message = value.get("message", None)<br/>                except ValueError:<br/>                    pass<br/>    <br/>        exception_class: Type[WebDriverException]<br/>        e = ErrorCode()<br/>        error_codes = [item for item in dir(e) if not item.startswith("__")]<br/>        for error_code in error_codes:<br/>            error_info = getattr(ErrorCode, error_code)<br/>            if isinstance(error_info, list) and status in error_info:<br/>                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)<br/>                break<br/>        else:<br/>            exception_class = WebDriverException<br/>    <br/>        if not value:<br/>            value = response["value"]<br/>        if isinstance(value, str):<br/>            raise exception_class(value)<br/>        if message == "" and "message" in value:<br/>            message = value["message"]<br/>    <br/>        screen = None  # type: ignore[assignment]<br/>        if "screen" in value:<br/>            screen = value["screen"]<br/>    <br/>        stacktrace = None<br/>        st_value = value.get("stackTrace") or value.get("stacktrace")<br/>        if st_value:<br/>            if isinstance(st_value, str):<br/>                stacktrace = st_value.split("\n")<br/>            else:<br/>                stacktrace = []<br/>                try:<br/>                    for frame in st_value:<br/>                        line = frame.get("lineNumber", "")<br/>                        file = frame.get("fileName", "<anonymous>")<br/>                        if line:<br/>                            file = f"{file}:{line}"<br/>                        meth = frame.get("methodName", "<anonymous>")<br/>                        if "className" in frame:<br/>                            meth = f"{frame['className']}.{meth}"<br/>                        msg = "    at %s (%s)"<br/>                        msg = msg % (meth, file)<br/>                        stacktrace.append(msg)<br/>                except TypeError:<br/>                    pass<br/>        if exception_class == UnexpectedAlertPresentException:<br/>            alert_text = None<br/>            if "data" in value:<br/>                alert_text = value["data"].get("text")<br/>            elif "alert" in value:<br/>                alert_text = value["alert"].get("text")<br/>            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here<br/>>       raise exception_class(message, screen, stacktrace)<br/>E       selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: /html/body/div[4]/div/div/div[3]/a[2]/div; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception<br/>E       Stacktrace:<br/>E       RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8<br/>E       WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:192:5<br/>E       NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:510:5<br/>E       dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:229: NoSuchElementException<br/></span>
+                                                <span class="stderr">test_suite_2_home.py:178 (test13_acceder_transacciones[firefox])driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="f6b53cf2-2a76-4cc6-a5f9-0a59bc46d9ca")><br/>    def test13_acceder_transacciones(driver):<br/>        acceder_transacciones = Home_page(driver)<br/>        acceder_transacciones.acceder_herramientas()<br/>>       acceder_transacciones.acceder_transacciones()<br/>test_suite_2_home.py:182: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>..\Pages\page_home.py:54: in acceder_transacciones<br/>    transacciones = self.driver.find_element(*self.transacciones_locator)<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:742: in find_element<br/>    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:348: in execute<br/>    self.error_handler.check_response(response)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x0000027299939EE0><br/>response = {'status': 404, 'value': '{"value":{"error":"no such element","message":"Unable to locate element: Visualizador Transa.../content/shared/webdriver/Errors.sys.mjs:510:5\\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\\n"}}'}<br/>    def check_response(self, response: Dict[str, Any]) -> None:<br/>        """Checks that a JSON response from the WebDriver does not have an<br/>        error.<br/>    <br/>        :Args:<br/>         - response - The JSON response from the WebDriver server as a dictionary<br/>           object.<br/>    <br/>        :Raises: If the response contains an error message.<br/>        """<br/>        status = response.get("status", None)<br/>        if not status or status == ErrorCode.SUCCESS:<br/>            return<br/>        value = None<br/>        message = response.get("message", "")<br/>        screen: str = response.get("screen", "")<br/>        stacktrace = None<br/>        if isinstance(status, int):<br/>            value_json = response.get("value", None)<br/>            if value_json and isinstance(value_json, str):<br/>                import json<br/>    <br/>                try:<br/>                    value = json.loads(value_json)<br/>                    if len(value) == 1:<br/>                        value = value["value"]<br/>                    status = value.get("error", None)<br/>                    if not status:<br/>                        status = value.get("status", ErrorCode.UNKNOWN_ERROR)<br/>                        message = value.get("value") or value.get("message")<br/>                        if not isinstance(message, str):<br/>                            value = message<br/>                            message = message.get("message")<br/>                    else:<br/>                        message = value.get("message", None)<br/>                except ValueError:<br/>                    pass<br/>    <br/>        exception_class: Type[WebDriverException]<br/>        e = ErrorCode()<br/>        error_codes = [item for item in dir(e) if not item.startswith("__")]<br/>        for error_code in error_codes:<br/>            error_info = getattr(ErrorCode, error_code)<br/>            if isinstance(error_info, list) and status in error_info:<br/>                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)<br/>                break<br/>        else:<br/>            exception_class = WebDriverException<br/>    <br/>        if not value:<br/>            value = response["value"]<br/>        if isinstance(value, str):<br/>            raise exception_class(value)<br/>        if message == "" and "message" in value:<br/>            message = value["message"]<br/>    <br/>        screen = None  # type: ignore[assignment]<br/>        if "screen" in value:<br/>            screen = value["screen"]<br/>    <br/>        stacktrace = None<br/>        st_value = value.get("stackTrace") or value.get("stacktrace")<br/>        if st_value:<br/>            if isinstance(st_value, str):<br/>                stacktrace = st_value.split("\n")<br/>            else:<br/>                stacktrace = []<br/>                try:<br/>                    for frame in st_value:<br/>                        line = frame.get("lineNumber", "")<br/>                        file = frame.get("fileName", "<anonymous>")<br/>                        if line:<br/>                            file = f"{file}:{line}"<br/>                        meth = frame.get("methodName", "<anonymous>")<br/>                        if "className" in frame:<br/>                            meth = f"{frame['className']}.{meth}"<br/>                        msg = "    at %s (%s)"<br/>                        msg = msg % (meth, file)<br/>                        stacktrace.append(msg)<br/>                except TypeError:<br/>                    pass<br/>        if exception_class == UnexpectedAlertPresentException:<br/>            alert_text = None<br/>            if "data" in value:<br/>                alert_text = value["data"].get("text")<br/>            elif "alert" in value:<br/>                alert_text = value["alert"].get("text")<br/>            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here<br/>>       raise exception_class(message, screen, stacktrace)<br/>E       selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: Visualizador Transacciones Profesionales; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception<br/>E       Stacktrace:<br/>E       RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8<br/>E       WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:192:5<br/>E       NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:510:5<br/>E       dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:229: NoSuchElementException<br/></span>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="level test failed open">
+                                    <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">10.05 s</div>
-                                            </em><em class="status">failed</em>(edge)</span>
+                                                <div class="time">1.61 s</div>
+                                            </em><em class="status">passed</em>(edge)</span>
                                         <ul>
                                             <li class="text">
-                                                <span class="stdout">FAILED          [ 92%]<br/></span>
-                                            </li>
-                                            <li class="text">
-                                                <span class="stderr">test_suite_2_home.py:180 (test13_acceder_transacciones[edge])driver = <selenium.webdriver.edge.webdriver.WebDriver (session="fc4ffdad0158425bb8bb279f86630c24")><br/>    def test13_acceder_transacciones(driver):<br/>        acceder_transacciones = Home_page(driver)<br/>>       acceder_transacciones.acceder_herramientas()<br/>test_suite_2_home.py:183: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>..\Pages\page_home.py:45: in acceder_herramientas<br/>    herramientas = wait.until(EC.element_to_be_clickable(self.driver.find_element(*self.herramientas_locator)))<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:742: in find_element<br/>    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:348: in execute<br/>    self.error_handler.check_response(response)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001F7A3FE1E20><br/>response = {'status': 404, 'value': '{"value":{"error":"no such element","message":"no such element: Unable to locate element: {\...67FEE1+201025]\\n\\tBaseThreadInitThunk [0x00007FFA12237344+20]\\n\\tRtlUserThreadStart [0x00007FFA12E226B1+33]\\n"}}'}<br/>    def check_response(self, response: Dict[str, Any]) -> None:<br/>        """Checks that a JSON response from the WebDriver does not have an<br/>        error.<br/>    <br/>        :Args:<br/>         - response - The JSON response from the WebDriver server as a dictionary<br/>           object.<br/>    <br/>        :Raises: If the response contains an error message.<br/>        """<br/>        status = response.get("status", None)<br/>        if not status or status == ErrorCode.SUCCESS:<br/>            return<br/>        value = None<br/>        message = response.get("message", "")<br/>        screen: str = response.get("screen", "")<br/>        stacktrace = None<br/>        if isinstance(status, int):<br/>            value_json = response.get("value", None)<br/>            if value_json and isinstance(value_json, str):<br/>                import json<br/>    <br/>                try:<br/>                    value = json.loads(value_json)<br/>                    if len(value) == 1:<br/>                        value = value["value"]<br/>                    status = value.get("error", None)<br/>                    if not status:<br/>                        status = value.get("status", ErrorCode.UNKNOWN_ERROR)<br/>                        message = value.get("value") or value.get("message")<br/>                        if not isinstance(message, str):<br/>                            value = message<br/>                            message = message.get("message")<br/>                    else:<br/>                        message = value.get("message", None)<br/>                except ValueError:<br/>                    pass<br/>    <br/>        exception_class: Type[WebDriverException]<br/>        e = ErrorCode()<br/>        error_codes = [item for item in dir(e) if not item.startswith("__")]<br/>        for error_code in error_codes:<br/>            error_info = getattr(ErrorCode, error_code)<br/>            if isinstance(error_info, list) and status in error_info:<br/>                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)<br/>                break<br/>        else:<br/>            exception_class = WebDriverException<br/>    <br/>        if not value:<br/>            value = response["value"]<br/>        if isinstance(value, str):<br/>            raise exception_class(value)<br/>        if message == "" and "message" in value:<br/>            message = value["message"]<br/>    <br/>        screen = None  # type: ignore[assignment]<br/>        if "screen" in value:<br/>            screen = value["screen"]<br/>    <br/>        stacktrace = None<br/>        st_value = value.get("stackTrace") or value.get("stacktrace")<br/>        if st_value:<br/>            if isinstance(st_value, str):<br/>                stacktrace = st_value.split("\n")<br/>            else:<br/>                stacktrace = []<br/>                try:<br/>                    for frame in st_value:<br/>                        line = frame.get("lineNumber", "")<br/>                        file = frame.get("fileName", "<anonymous>")<br/>                        if line:<br/>                            file = f"{file}:{line}"<br/>                        meth = frame.get("methodName", "<anonymous>")<br/>                        if "className" in frame:<br/>                            meth = f"{frame['className']}.{meth}"<br/>                        msg = "    at %s (%s)"<br/>                        msg = msg % (meth, file)<br/>                        stacktrace.append(msg)<br/>                except TypeError:<br/>                    pass<br/>        if exception_class == UnexpectedAlertPresentException:<br/>            alert_text = None<br/>            if "data" in value:<br/>                alert_text = value["data"].get("text")<br/>            elif "alert" in value:<br/>                alert_text = value["alert"].get("text")<br/>            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here<br/>>       raise exception_class(message, screen, stacktrace)<br/>E       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[4]/div/div/div[3]/a[2]/div"}<br/>E         (Session info: MicrosoftEdge=123.0.2420.97); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception<br/>E       Stacktrace:<br/>E       	GetHandleVerifier [0x00007FF6D46F5B82+59842]<br/>E       	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6D4684AB2+220434]<br/>E       	(No symbol) [0x00007FF6D44ADCD7]<br/>E       	(No symbol) [0x00007FF6D44F489D]<br/>E       	(No symbol) [0x00007FF6D44F4960]<br/>E       	(No symbol) [0x00007FF6D452F587]<br/>E       	(No symbol) [0x00007FF6D4513F6F]<br/>E       	(No symbol) [0x00007FF6D44EA0E7]<br/>E       	(No symbol) [0x00007FF6D452D149]<br/>E       	(No symbol) [0x00007FF6D4513B93]<br/>E       	(No symbol) [0x00007FF6D44E960E]<br/>E       	(No symbol) [0x00007FF6D44E87CC]<br/>E       	(No symbol) [0x00007FF6D44E91C1]<br/>E       	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF6D48A58FC+1052188]<br/>E       	(No symbol) [0x00007FF6D455FFC6]<br/>E       	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6D460150C+37916]<br/>E       	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF6D45F8E95+3493]<br/>E       	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF6D48A4865+1047941]<br/>E       	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6D468D2C1+255265]<br/>E       	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6D46885B4+235540]<br/>E       	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6D46886EB+235851]<br/>E       	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF6D467FEE1+201025]<br/>E       	BaseThreadInitThunk [0x00007FFA12237344+20]<br/>E       	RtlUserThreadStart [0x00007FFA12E226B1+33]<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:229: NoSuchElementException<br/></span>
+                                                <span class="stdout">PASSED          [ 92%]<br/></span>
                                             </li>
                                         </ul>
                                     </li>
@@ -1100,40 +1109,40 @@ jQuery.cookie = function(name, value, options) {
                     </li>
                     <li class="level top failed open">
                         <span><em class="time">
-                                <div class="time">40.12 s</div>
+                                <div class="time">12.94 s</div>
                             </em>test_suite_3_envio_consultas</span>
                         <ul>
                             <li class="level suite failed open">
                                 <span><em class="time">
-                                        <div class="time">40.12 s</div>
+                                        <div class="time">12.94 s</div>
                                     </em>test14_envio_de_consultas</span>
                                 <ul>
+                                    <li class="level test">
+                                        <span><em class="time">
+                                                <div class="time">4.25 s</div>
+                                            </em><em class="status">passed</em>(chrome)</span>
+                                        <ul>
+                                            <li class="text">
+                                                <span class="stdout">PASSED [ 95%]<br/>Tu consulta fue enviada<br/></span>
+                                            </li>
+                                        </ul>
+                                    </li>
                                     <li class="level test failed open">
                                         <span><em class="time">
-                                                <div class="time">30.06 s</div>
-                                            </em><em class="status">failed</em>(chrome)</span>
+                                                <div class="time">5.84 s</div>
+                                            </em><em class="status">failed</em>(firefox)</span>
                                         <ul>
                                             <li class="text">
-                                                <span class="stdout">FAILED [ 95%]<br/></span>
+                                                <span class="stdout">FAILED [ 97%]<br/></span>
                                             </li>
                                             <li class="text">
-                                                <span class="stderr">test_suite_3_envio_consultas.py:74 (test14_envio_de_consultas[chrome])driver = <selenium.webdriver.chrome.webdriver.WebDriver (session="36e413d6714c7e898ebf7b8dffb9915c")><br/>    def test14_envio_de_consultas(driver):<br/>        acceder_envio_consultas = Home_page(driver)<br/>>       acceder_envio_consultas.acceder_herramientas()<br/>test_suite_3_envio_consultas.py:77: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>..\Pages\page_home.py:45: in acceder_herramientas<br/>    herramientas = wait.until(EC.element_to_be_clickable(self.driver.find_element(*self.herramientas_locator)))<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:742: in find_element<br/>    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:348: in execute<br/>    self.error_handler.check_response(response)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001F7A3F26540><br/>response = {'status': 404, 'value': '{"value":{"error":"no such element","message":"no such element: Unable to locate element: {\...07FF63645A574]\\n\\tBaseThreadInitThunk [0x00007FFA12237344+20]\\n\\tRtlUserThreadStart [0x00007FFA12E226B1+33]\\n"}}'}<br/>    def check_response(self, response: Dict[str, Any]) -> None:<br/>        """Checks that a JSON response from the WebDriver does not have an<br/>        error.<br/>    <br/>        :Args:<br/>         - response - The JSON response from the WebDriver server as a dictionary<br/>           object.<br/>    <br/>        :Raises: If the response contains an error message.<br/>        """<br/>        status = response.get("status", None)<br/>        if not status or status == ErrorCode.SUCCESS:<br/>            return<br/>        value = None<br/>        message = response.get("message", "")<br/>        screen: str = response.get("screen", "")<br/>        stacktrace = None<br/>        if isinstance(status, int):<br/>            value_json = response.get("value", None)<br/>            if value_json and isinstance(value_json, str):<br/>                import json<br/>    <br/>                try:<br/>                    value = json.loads(value_json)<br/>                    if len(value) == 1:<br/>                        value = value["value"]<br/>                    status = value.get("error", None)<br/>                    if not status:<br/>                        status = value.get("status", ErrorCode.UNKNOWN_ERROR)<br/>                        message = value.get("value") or value.get("message")<br/>                        if not isinstance(message, str):<br/>                            value = message<br/>                            message = message.get("message")<br/>                    else:<br/>                        message = value.get("message", None)<br/>                except ValueError:<br/>                    pass<br/>    <br/>        exception_class: Type[WebDriverException]<br/>        e = ErrorCode()<br/>        error_codes = [item for item in dir(e) if not item.startswith("__")]<br/>        for error_code in error_codes:<br/>            error_info = getattr(ErrorCode, error_code)<br/>            if isinstance(error_info, list) and status in error_info:<br/>                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)<br/>                break<br/>        else:<br/>            exception_class = WebDriverException<br/>    <br/>        if not value:<br/>            value = response["value"]<br/>        if isinstance(value, str):<br/>            raise exception_class(value)<br/>        if message == "" and "message" in value:<br/>            message = value["message"]<br/>    <br/>        screen = None  # type: ignore[assignment]<br/>        if "screen" in value:<br/>            screen = value["screen"]<br/>    <br/>        stacktrace = None<br/>        st_value = value.get("stackTrace") or value.get("stacktrace")<br/>        if st_value:<br/>            if isinstance(st_value, str):<br/>                stacktrace = st_value.split("\n")<br/>            else:<br/>                stacktrace = []<br/>                try:<br/>                    for frame in st_value:<br/>                        line = frame.get("lineNumber", "")<br/>                        file = frame.get("fileName", "<anonymous>")<br/>                        if line:<br/>                            file = f"{file}:{line}"<br/>                        meth = frame.get("methodName", "<anonymous>")<br/>                        if "className" in frame:<br/>                            meth = f"{frame['className']}.{meth}"<br/>                        msg = "    at %s (%s)"<br/>                        msg = msg % (meth, file)<br/>                        stacktrace.append(msg)<br/>                except TypeError:<br/>                    pass<br/>        if exception_class == UnexpectedAlertPresentException:<br/>            alert_text = None<br/>            if "data" in value:<br/>                alert_text = value["data"].get("text")<br/>            elif "alert" in value:<br/>                alert_text = value["alert"].get("text")<br/>            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here<br/>>       raise exception_class(message, screen, stacktrace)<br/>E       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[4]/div/div/div[3]/a[2]/div"}<br/>E         (Session info: chrome=124.0.6367.61); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception<br/>E       Stacktrace:<br/>E       	GetHandleVerifier [0x00007FF6367BF922+3045234]<br/>E       	(No symbol) [0x00007FF636463652]<br/>E       	(No symbol) [0x00007FF636327564]<br/>E       	(No symbol) [0x00007FF636375F9D]<br/>E       	(No symbol) [0x00007FF63637606C]<br/>E       	(No symbol) [0x00007FF6363BBDD7]<br/>E       	(No symbol) [0x00007FF636399DEF]<br/>E       	(No symbol) [0x00007FF6363B91C4]<br/>E       	(No symbol) [0x00007FF636399B53]<br/>E       	(No symbol) [0x00007FF63636813C]<br/>E       	(No symbol) [0x00007FF636368D71]<br/>E       	GetHandleVerifier [0x00007FF6367EE89D+3237613]<br/>E       	GetHandleVerifier [0x00007FF636830BA7+3508727]<br/>E       	GetHandleVerifier [0x00007FF63682976F+3478975]<br/>E       	GetHandleVerifier [0x00007FF63659F1C6+815126]<br/>E       	(No symbol) [0x00007FF63646ED0F]<br/>E       	(No symbol) [0x00007FF636469854]<br/>E       	(No symbol) [0x00007FF6364699E2]<br/>E       	(No symbol) [0x00007FF63645A574]<br/>E       	BaseThreadInitThunk [0x00007FFA12237344+20]<br/>E       	RtlUserThreadStart [0x00007FFA12E226B1+33]<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:229: NoSuchElementException<br/></span>
+                                                <span class="stderr">test_suite_3_envio_consultas.py:70 (test14_envio_de_consultas[firefox])driver = <selenium.webdriver.firefox.webdriver.WebDriver (session="eed0fb93-82ed-4074-8885-a7ad8e7e851a")><br/>    def test14_envio_de_consultas(driver):<br/>        acceder_envio_consultas = Home_page(driver)<br/>        acceder_envio_consultas.acceder_herramientas()<br/>>       acceder_envio_consultas.acceder_envio_consultas()<br/>test_suite_3_envio_consultas.py:74: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>..\Pages\page_home.py:38: in acceder_envio_consultas<br/>    envio_consultas = self.driver.find_element(*self.envio_consultas_locator)<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:742: in find_element<br/>    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:348: in execute<br/>    self.error_handler.check_response(response)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000002729993B380><br/>response = {'status': 404, 'value': '{"value":{"error":"no such element","message":"Unable to locate element: Envío de consultas".../content/shared/webdriver/Errors.sys.mjs:510:5\\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16\\n"}}'}<br/>    def check_response(self, response: Dict[str, Any]) -> None:<br/>        """Checks that a JSON response from the WebDriver does not have an<br/>        error.<br/>    <br/>        :Args:<br/>         - response - The JSON response from the WebDriver server as a dictionary<br/>           object.<br/>    <br/>        :Raises: If the response contains an error message.<br/>        """<br/>        status = response.get("status", None)<br/>        if not status or status == ErrorCode.SUCCESS:<br/>            return<br/>        value = None<br/>        message = response.get("message", "")<br/>        screen: str = response.get("screen", "")<br/>        stacktrace = None<br/>        if isinstance(status, int):<br/>            value_json = response.get("value", None)<br/>            if value_json and isinstance(value_json, str):<br/>                import json<br/>    <br/>                try:<br/>                    value = json.loads(value_json)<br/>                    if len(value) == 1:<br/>                        value = value["value"]<br/>                    status = value.get("error", None)<br/>                    if not status:<br/>                        status = value.get("status", ErrorCode.UNKNOWN_ERROR)<br/>                        message = value.get("value") or value.get("message")<br/>                        if not isinstance(message, str):<br/>                            value = message<br/>                            message = message.get("message")<br/>                    else:<br/>                        message = value.get("message", None)<br/>                except ValueError:<br/>                    pass<br/>    <br/>        exception_class: Type[WebDriverException]<br/>        e = ErrorCode()<br/>        error_codes = [item for item in dir(e) if not item.startswith("__")]<br/>        for error_code in error_codes:<br/>            error_info = getattr(ErrorCode, error_code)<br/>            if isinstance(error_info, list) and status in error_info:<br/>                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)<br/>                break<br/>        else:<br/>            exception_class = WebDriverException<br/>    <br/>        if not value:<br/>            value = response["value"]<br/>        if isinstance(value, str):<br/>            raise exception_class(value)<br/>        if message == "" and "message" in value:<br/>            message = value["message"]<br/>    <br/>        screen = None  # type: ignore[assignment]<br/>        if "screen" in value:<br/>            screen = value["screen"]<br/>    <br/>        stacktrace = None<br/>        st_value = value.get("stackTrace") or value.get("stacktrace")<br/>        if st_value:<br/>            if isinstance(st_value, str):<br/>                stacktrace = st_value.split("\n")<br/>            else:<br/>                stacktrace = []<br/>                try:<br/>                    for frame in st_value:<br/>                        line = frame.get("lineNumber", "")<br/>                        file = frame.get("fileName", "<anonymous>")<br/>                        if line:<br/>                            file = f"{file}:{line}"<br/>                        meth = frame.get("methodName", "<anonymous>")<br/>                        if "className" in frame:<br/>                            meth = f"{frame['className']}.{meth}"<br/>                        msg = "    at %s (%s)"<br/>                        msg = msg % (meth, file)<br/>                        stacktrace.append(msg)<br/>                except TypeError:<br/>                    pass<br/>        if exception_class == UnexpectedAlertPresentException:<br/>            alert_text = None<br/>            if "data" in value:<br/>                alert_text = value["data"].get("text")<br/>            elif "alert" in value:<br/>                alert_text = value["alert"].get("text")<br/>            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here<br/>>       raise exception_class(message, screen, stacktrace)<br/>E       selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: Envío de consultas; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception<br/>E       Stacktrace:<br/>E       RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8<br/>E       WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:192:5<br/>E       NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:510:5<br/>E       dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16<br/>C:\Users\cdt\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:229: NoSuchElementException<br/></span>
                                             </li>
                                         </ul>
                                     </li>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">4.50 s</div>
-                                            </em><em class="status">passed</em>(firefox)</span>
-                                        <ul>
-                                            <li class="text">
-                                                <span class="stdout">PASSED [ 97%]<br/>Tu consulta fue enviada<br/></span>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="level test">
-                                        <span><em class="time">
-                                                <div class="time">5.55 s</div>
+                                                <div class="time">2.85 s</div>
                                             </em><em class="status">passed</em>(edge)</span>
                                         <ul>
                                             <li class="text">
@@ -1149,7 +1158,7 @@ jQuery.cookie = function(name, value, options) {
             </div>
         </div>
         <div id="footer">
-            <p>Generated by PyCharm on 18/4/24 14:59</p>
+            <p>Generated by PyCharm on 8/5/24 13:03</p>
         </div>
     </body>
 </html>
